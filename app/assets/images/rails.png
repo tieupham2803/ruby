@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head><base href="https://n85.network-auth.com/splash/" />
+  <title>HUST-Student</title>
+
+  <style type="text/css" media="screen">
+    /* body: #f7f7f7 #676767 #1682B9
+   c1:   #fff    #858585 #FFFFFF
+   c2:   #f7f7f7 #DDDDDD #66bc29
+*/
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+form { margin: 0; }
+label { cursor: pointer; }
+button, input { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; line-height: normal; *overflow: visible; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+a, a:visited, a:active {color: #1682b9; text-decoration: none;}
+a:hover {color: #444;}
+
+.hidden { display: none; }
+
+body {
+  margin: 0;
+  background: #f7f7f7;
+  color: #676767;
+  font-size: 14px;
+  line-height: 1.4em;
+  font-family: georgia, palatino, serif;
+}
+
+h1, h2 { font-family: helvetica, helvetica neue, verdana, tahoma, sans-serif; }
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #676767;
+  margin: 0;
+}
+h2 {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.header {
+  border-bottom: 1px solid #d1d1d1;
+  padding: 0 0 .5em;
+  margin: 0 0 1em 0;
+}
+
+.header table { width: 100%; }
+#title_cell { vertical-align: bottom; }
+#icon_cell { text-align: right; }
+
+#container {
+  max-width: 900px;
+  min-width: 300px;
+  margin: 0 auto;
+  border-top: 12px solid #66bc29;
+  padding: 0.5em 30px;
+  background: #ffffff;
+  box-shadow:0px 0px 10px #BFBFBF
+}
+
+#left_col {
+  float: left;
+  width: 100%;
+}
+
+#right_col {
+  float: left;
+  width: 420px;
+  margin-left: -420px;
+}
+
+#left_col_inner {
+  margin-right: 420px;
+  padding-right: 30px;
+}
+
+#blocked_msg {
+  text-align: center;
+  padding: 15px 0;
+}
+
+#claim_ap_msg {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.formarea {
+  background: #f7f7f7;
+  color: #5e5e5e;
+  padding: 15px;
+  border: 1px solid #cfcfcf;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.formarea ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.formarea li { margin-top: 22px; }
+.formarea li:first-child { margin-top: 10px; }
+.formarea br { display: none; }
+
+.formarea label {min-height: 30px; margin: 1em 0 14px; padding: 0 0 15px;}
+.formarea input {width: 95%;}
+/*.formarea input:hover, .formarea input:focus {border-color: #aaa; box-shadow: none;}*/
+.formarea input, .formarea textarea {
+  padding: 7px;
+  background: #ffffff;
+  color: #676767;
+  border: solid 1px #ccc;
+  font-size: 1em;
+}
+
+.formarea select, .formarea textarea {font-size: 1em;}
+.formarea .color_button { width: 50%; }
+
+.color_button {
+  padding: 0;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: 600;
+  background: #66bc29;
+  white-space: nowrap;
+  display: inline-block;
+  background: -moz-linear-gradient(top, rgba(102, 188, 41, 1) 0%, rgba(98, 158, 25, 1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(102, 188, 41, 1)), color-stop(100%,rgba(98, 158, 25, 1)));
+  background: -webkit-linear-gradient(top, rgba(102, 188, 41, 1) 0%, rgba(98, 158, 25, 1) 100%);
+  background: -o-linear-gradient(top, rgba(102, 188, 41, 1) 0%, rgba(98, 158, 25, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(102, 188, 41, 1) 0%, rgba(98, 158, 25, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66bc29', endColorstr='#639e1a',GradientType=0 );
+  background: linear-gradient(top, rgba(102, 188, 41, 1) 0%, rgba(98, 158, 25, 1) 100%);
+}
+
+.color_button:hover, .color_button:focus {
+  background: #5f800a;
+  background: -moz-linear-gradient(top, rgba(102, 188, 41, 1) 0%, rgba(95, 128, 10, 1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(102, 188, 41, 1)), color-stop(100%,rgba(95, 128, 10, 1)));
+  background: -webkit-linear-gradient(top, rgba(102, 188, 41, 1) 0%, rgba(95, 128, 10, 1) 100%);
+  background: -o-linear-gradient(top, rgba(102, 188, 41, 1) 0%, rgba(95, 128, 10, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(102, 188, 41, 1) 0%, rgba(95, 128, 10, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66bc29', endColorstr='#5f800a',GradientType=0 );
+  background: linear-gradient(top, rgba(102, 188, 41, 1) 0%, rgba(95, 128, 10, 1) 100%);
+}
+
+.color_button.wider { padding: 12px 30px; }
+
+.color_button input, .color_button a {
+  padding: 12px 3px;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  height: auto;
+  color: #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: -3px auto;
+  cursor: pointer;
+}
+
+.form_links {
+  float: right;
+  margin-top: -2em;
+  width: 45%;
+  text-align: center;
+}
+
+.footer {
+  clear: both;
+  border-top: 1px solid #d1d1d1;
+  padding: 0.5em 0 0 3px;
+  margin: 1em 0 0 0;
+  color: #d1d1d1;
+}
+
+.footer img {
+  margin-left: 5px;
+  vertical-align: top;
+}
+
+.error_outer {
+  margin: 0 auto 1em;
+  background: #ea4a52;
+  background: rgba(234, 74, 82, 0.5);
+  padding: 4px;
+  border-radius: 3px;
+}
+.error_inner {
+  background: #ea4a52;
+  color: #fff;
+  padding: 0.3em 20px;
+  text-align: center;
+}
+.error_inner p {font-family: Helvetica, Verdana, arial, sans-serif;}
+.error_inner p span {font-size: 1.5em; font-weight: bold; margin-right: .8em;}
+
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+.formarea input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 0px red; -webkit-box-shadow: 0px 0px 0px red; box-shadow: 0px 0px 0px red; }
+.formarea label.invalid {border: none; color: red; min-height: inherit; padding: 5px 0 0; margin: 0;}
+
+@media only screen and (max-width: 730px) {
+  #left_col_inner { margin: 0; padding: 0; }
+  #right_col {
+    float: none;
+    clear: both;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #container { padding: 0.5em 5px; }
+  #right_col { width: 100%; }
+}
+
+
+    #container { max-width: 700px; }
+  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+</head>
+
+<body>
+  <div id="container">
+
+    <div class="header">
+      <table><tr>
+        <td id="title_cell"><h1>HUST-Student</h1></td>
+        <td id="icon_cell"></td>
+      </tr></table>
+    </div>
+
+    <div>
+      <p></p>
+      <div class="color_button wider">
+        <a href="https://n85.network-auth.com/HUST-Student/hi/eYN04dPp/grant?continue_url=http://google.com/" onclick = "javascript:(function() {
+       var _request = new XMLHttpRequest();
+       var url = 'https://n85.network-auth.com/HUST-Student/hi/eYN04dPp/grant?continue_url=CONTINUE_URL_PLACEHOLDER';
+       _request.open('HEAD', window.location, true);
+       _request.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+       _request.onreadystatechange = function() {
+         if (_request.readyState === 4) {
+           var continue_url = _request.getResponseHeader('Continue-Url');
+           window.location.href = url.replace('CONTINUE_URL_PLACEHOLDER', continue_url);
+         };
+       };
+       _request.send(null);
+     })(); return false;" title="Continue to the Internet" id="continue_link">Continue to the Internet</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <img alt="Powered by Cisco Meraki" src="/images/powered-by-cisco-meraki-30x220.png?1470266276" />
+    </div>
+  </div>
+
+</body>
+</html>

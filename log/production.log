@@ -1,0 +1,23 @@
+D, [2016-10-10T11:03:09.387622 #9895] DEBUG -- :   [1m[35m (183.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+D, [2016-10-10T11:03:09.510685 #9895] DEBUG -- :   [1m[35m (120.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2016-10-10T11:03:09.520287 #9895] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2016-10-10T11:03:09.523519 #9895]  INFO -- : Migrating to CreateUsers (20161008093040)
+D, [2016-10-10T11:03:09.525747 #9895] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+D, [2016-10-10T11:03:09.527374 #9895] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2016-10-10T11:03:09.531105 #9895] DEBUG -- :   [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161008093040"]]
+D, [2016-10-10T11:03:09.656187 #9895] DEBUG -- :   [1m[35m (124.7ms)[0m  [1m[36mcommit transaction[0m
+I, [2016-10-10T11:03:09.656635 #9895]  INFO -- : Migrating to AddPasswordDigestToUsers (20161008172816)
+D, [2016-10-10T11:03:09.657813 #9895] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+D, [2016-10-10T11:03:09.659021 #9895] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" varchar[0m
+D, [2016-10-10T11:03:09.660818 #9895] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161008172816"]]
+D, [2016-10-10T11:03:09.729402 #9895] DEBUG -- :   [1m[35m (68.3ms)[0m  [1m[36mcommit transaction[0m
+I, [2016-10-10T11:03:09.729585 #9895]  INFO -- : Migrating to AddIndexToUsersEmail (20161010022249)
+D, [2016-10-10T11:03:09.730409 #9895] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+D, [2016-10-10T11:03:09.730994 #9895] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+D, [2016-10-10T11:03:09.731699 #9895] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+D, [2016-10-10T11:03:09.732596 #9895] DEBUG -- :   [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161010022249"]]
+D, [2016-10-10T11:03:09.902210 #9895] DEBUG -- :   [1m[35m (169.4ms)[0m  [1m[36mcommit transaction[0m
+D, [2016-10-10T11:03:09.904653 #9895] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+D, [2016-10-10T11:03:09.910301 #9895] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+D, [2016-10-10T11:03:09.912994 #9895] DEBUG -- :   [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "production"], ["created_at", 2016-10-10 04:03:09 UTC], ["updated_at", 2016-10-10 04:03:09 UTC]]
+D, [2016-10-10T11:03:10.006916 #9895] DEBUG -- :   [1m[35m (93.5ms)[0m  [1m[36mcommit transaction[0m
